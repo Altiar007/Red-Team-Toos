@@ -24,10 +24,6 @@ def scan_port(ipaddress , port):
     except:
         pass
 
-targates = input('[+] Enter Target(s) to Scan(seprate with ,):')
+targates = input('[+] Enter Target to Scan: ')
 user_range = input("[+] Enter the Range of Ports(1 onwards): ")
-if ',' in targates:
-    for ip_add in targates.split(','):
-        scan(ip_add.strip(' ') , user_range)
-else:
-    scan(targates, user_range)
+scan(targates, user_range)
