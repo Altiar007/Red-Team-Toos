@@ -1,10 +1,10 @@
 import socket
 from IPy import IP
 
-def scan(targate):
+def scan(targate, rang):
     converted_ip = check_ip(targate)
-    print(f'\n [+]Scanning Targate {targate}')
-    for port in range(1 , 100): # Change the range to required range
+    print(f'\n[+]Scanning Targate {targate}')
+    for port in range(0, int(rang)): # Change the range to required range
         scan_port(targates , port)
 
 # Check if the user Entered an IP Address or a Domain Name & change it to IP address
@@ -25,9 +25,9 @@ def scan_port(ipaddress , port):
         pass
 
 targates = input('[+] Enter Target(s) to Scan(seprate with ,):')
-
+user_range = input("[+] Enter the Range of Ports(1 onwards): ")
 if ',' in targates:
     for ip_add in targates.split(','):
-        scan(ip_add.strip(' ') , )
+        scan(ip_add.strip(' ') , user_range)
 else:
-    scan(targates)
+    scan(targates, user_range)
