@@ -1,0 +1,15 @@
+ moksh@fedora  ~/Red-Team-Toos/port-scanner   main ● ?  python Port_Scanner.py --help                                                                                                     ✔  367  13:02:51
+
+ ______                      ______                                     
+(_____ \             _      / _____)                                    
+ _____) )__   ____ _| |_   ( (____   ____ _____ ____  ____  _____  ____ 
+|  ____/ _ \ / ___|_   _)   \____ \ / ___|____ |  _ \|  _ \| ___ |/ ___)
+| |   | |_| | |     | |_    _____) | (___/ ___ | | | | | | | ____| |    
+|_|    \___/|_|      \__)  (______/ \____)_____|_| |_|_| |_|_____)_|
+
+usage: Port_Scanner.py [-h] [--ip IP] [--port PORT]
+
+options:
+  -h, --help            show this help message and exit
+  --ip IP, -i IP
+  --port PORT, -p PORT
