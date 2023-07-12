@@ -22,28 +22,6 @@ Directories will be scanned from the list specified by you.
 custom_usage = "Port_Scanner.py [-i] [-w]"
 
 def main():
-	# if len(argv) == 1 :
-	# 	print('''
-	# 		Please use the command given below...
-	# 		python dirbust.py url wordlist
-	# 		example:
-	# 		python dirbust.py http://example.com/ wordlist.txt/
-	# 		''')
-	# elif len(argv) == 2:
-	# 	if argv[1][len(argv[1])-4:len(argv[1])] == '.txt':
-	# 		print('\t\t\tPlease give url of a site before wordlist.')
-	# 	else:
-	# 		print('\t\t\tPlease enter link of the wordlist after url.')
-	# elif len(argv) == 3:
-	# 	dirb(str(argv[1]),"/"+str(argv[2]))
-	# else:
-	# 	print('''
-	# 		You have entered command in wrong format.
-	# 		Please use the command given below...
-	# 		python dirbust.py url wordlist
-	# 		example:
-	# 		python dirbust.py http://example.com/ wordlist.txt/
-	# 		''')
 	praser = argparse.ArgumentParser()
 	parser = argparse.ArgumentParser(usage = custom_usage, add_help=False)
 	praser.add_argument('--ip', '-i' ,type = str, default= "", help = "Domain Name/ IP Address of Target")
