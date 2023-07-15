@@ -2,6 +2,18 @@ import sys
 import os
 import comtypes.client
 
+title = """
+ __   __  _______  _______  ______    _______  _______    _______  _______  _______  __    _  _______  ______   
+|  |_|  ||   _   ||       ||    _ |  |       ||       |  |       ||       ||   _   ||  |  | ||       ||    _ |  
+|       ||  |_|  ||       ||   | ||  |   _   ||  _____|  |  _____||       ||  |_|  ||   |_| ||    ___||   | ||  
+|       ||       ||       ||   |_||_ |  | |  || |_____   | |_____ |       ||       ||       ||   |___ |   |_||_ 
+|       ||       ||      _||    __  ||  |_|  ||_____  |  |_____  ||      _||       ||  _    ||    ___||    __  |
+| ||_|| ||   _   ||     |_ |   |  | ||       | _____| |   _____| ||     |_ |   _   || | |   ||   |___ |   |  | |
+|_|   |_||__| |__||_______||___|  |_||_______||_______|  |_______||_______||__| |__||_|  |__||_______||___|  |_|
+"""
+
+print(title)
+
 def check_macros_enabled(file_path):
     # Get the file extension
     _, file_extension = os.path.splitext(file_path)
@@ -38,7 +50,7 @@ def check_macros_enabled(file_path):
 
 # Get the file path from the command-line argument
 if len(sys.argv) != 2:
-    print("Usage: python macro_detection.py <file_path>")
+    print("Usage: python macros-scanner.py <file_path>")
     sys.exit(1)
 
 file_path = sys.argv[1]
