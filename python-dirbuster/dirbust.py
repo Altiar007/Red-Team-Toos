@@ -19,7 +19,7 @@ A Program to Fetch Directories of a Site.
 You can enter either IP Address of the website or you can use the Domain Name.
 Directories will be scanned from the list specified by you.
 """
-custom_usage = "Port_Scanner.py [-i] [-w]"
+custom_usage = "dirbust.py [-i] [-w]"
 
 def main():
 	praser = argparse.ArgumentParser()
@@ -44,16 +44,14 @@ def dirb(urls,wordlist):
 		else:
 			print('Host is down.')
 			return
-		if os.path.exists(os.getcwd()+wordlist):
-			fs=open(os.getcwd()+wordlist,"r")
+		if os.path.exists(wordlist):
+			fs=open(wordlist, 'r')
 			for i in fs:
 				print(url+"/"+i)
 				rq=requests.get(url+"/"+i)
 				if rq.status_code == 200:
 					print(">OK".rjust(len(url+"/"+i)+5,'-'))
 					arr.append(str(url+"/"+i))
-				else:
-					print(">404".rjust(len(url+"/"+i)+5,'-'))
 			fs.close()
 			print("output".center(100,'-'))
 			l=1
@@ -64,8 +62,6 @@ def dirb(urls,wordlist):
 			print(wordlist+" don't exists in the directory.")
 	except Exception as e:
 		print(e)
-
-
 
 if __name__ == '__main__':
 	main()
