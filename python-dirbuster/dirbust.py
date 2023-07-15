@@ -51,7 +51,7 @@ def dirb(urls,wordlist):
 				print(url+"/"+i)
 				rq=requests.get(url+"/"+i)
 				if rq.status_code == 200:
-					print(">OK".rjust(len(url+"/"+i)+5,'-'))
+					print(url+"/"+i)
 					arr.append(str(url+"/"+i))
 			fs.close()
 			print("output".center(100,'-'))
