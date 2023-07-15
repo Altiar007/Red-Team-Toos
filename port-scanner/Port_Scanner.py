@@ -1,5 +1,24 @@
 import socket, argparse, sys
 from IPy import IP
+
+title = """
+ ______                      ______                                     
+(_____ \             _      / _____)                                    
+ _____) )__   ____ _| |_   ( (____   ____ _____ ____  ____  _____  ____ 
+|  ____/ _ \ / ___|_   _)   \____ \ / ___|____ |  _ \|  _ \| ___ |/ ___)
+| |   | |_| | |     | |_    _____) | (___/ ___ | | | | | | | ____| |    
+|_|    \___/|_|      \__)  (______/ \____)_____|_| |_|_| |_|_____)_|
+"""
+
+custom_help = """
+A Program to Fetch Open Ports of a Site. 
+You can enter either IP Address of the website or you can use the Domain Name.
+The Ports will be scanned from 1 to the the number specified by you.
+"""
+
+print(title)
+custom_usage = "Port_Scanner.py [-i] [-p]"
+
 def scan(targate, rang):
     converted_ip = check_ip(targate)
     print(f'\n[+]Scanning Target {targate}')
@@ -23,23 +42,6 @@ def scan_port(ipaddress , port):
     except:
         pass
 
-title = """
- ______                      ______                                     
-(_____ \             _      / _____)                                    
- _____) )__   ____ _| |_   ( (____   ____ _____ ____  ____  _____  ____ 
-|  ____/ _ \ / ___|_   _)   \____ \ / ___|____ |  _ \|  _ \| ___ |/ ___)
-| |   | |_| | |     | |_    _____) | (___/ ___ | | | | | | | ____| |    
-|_|    \___/|_|      \__)  (______/ \____)_____|_| |_|_| |_|_____)_|
-"""
-
-custom_help = """
-A Program to Fetch Open Ports of a Site. 
-You can enter either IP Address of the website or you can use the Domain Name.
-The Ports will be scanned from 1 to the the number specified by you.
-"""
-
-print(title)
-custom_usage = "Port_Scanner.py [-i] [-p]"
 
 if __name__ == '__main__':
     praser = argparse.ArgumentParser()
