@@ -26,6 +26,7 @@ def main():
 	parser = argparse.ArgumentParser(usage = custom_usage, add_help=False)
 	praser.add_argument('--ip', '-i' ,type = str, default= "", help = "Domain Name/ IP Address of Target")
 	praser.add_argument('--wordlist', '-w', type = str, default= "", help = "Word List")
+	praser.add_argument('--output', '-o', type = str, default= "", help = "Write open Directories to a File")
 	parser.add_argument('-h', '--help', action='store_true', help=print(custom_help))
 	args = praser.parse_args()
 	if not any(vars(args).values() or args.help or args.h):
