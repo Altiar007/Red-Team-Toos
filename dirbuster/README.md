@@ -1,4 +1,7 @@
-# [Directory Buster](images/dirbuster-logo.svg)
+# Directory Buster
+
+![DirBuster Logo](images/dirbuster-logo.svg)
+![Python](https://img.shields.io/badge/Python-3.7%2B-blue)
 
 ## Description
 
