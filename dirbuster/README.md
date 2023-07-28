@@ -1,6 +1,4 @@
-# Directory Buster
-
-![DirBuster Logo](images/dirbuster-logo.svg)
+# [Directory Buster](images/dirbuster-logo.svg)
 
 ## Description
 
